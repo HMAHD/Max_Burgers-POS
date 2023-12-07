@@ -26,10 +26,10 @@ Max_Burgers-POS is a group project related to the Advanced Database Management S
 **[MaxBurgersPOS](https://maxburgerspos.000webhostapp.com)** | <img src="https://media1.giphy.com/media/f5NQ7J743N8hVDM1Yu/giphy.gif" alt="Live 🔴" width="50">
 
 ### Demo Login Details
-
-- **Username:** admin
-- **Password:** 123
-
+```
+- Username: admin
+- Password: 123
+```
 
 ## 🌟 Key Features
 
