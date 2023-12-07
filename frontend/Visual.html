@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
+      rel="stylesheet"
+    />
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <style type="text/css">
+    .bg1 {
+      background: #121421;
+    }
+
+    .bg2 {
+      background: #1e202c;
+    }
+
+    .bg3 {
+      background: #292b37;
+    }
+
+    .dot-pending {
+      color: #f8ca30;
+    }
+
+    .dot-danger {
+      color: #f8728a;
+    }
+
+    .dot-success {
+      color: #0bcb90;
+    }
+
+    * {
+      font-family: "Arvo", serif;
+    }
+  </style>
+
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row m-0">
+        <div class="p-2 bg2" style="height: 100vh; width: 320px">
+          <p class="ml-1 font-weight-bold text-white" style="font-size: 130%">
+            Dashboard
+          </p>
+          <div style="height: calc(100vh - 225px); width: 100%">
+            <div class="p-2 bg1 mb-2" style="height: 67px; width: 100%">
+              <div
+                class="mr-2 float-left"
+                style="width: 50px; height: 50px; background: green"
+              >
+                <img
+                  src="../public/images/product/1.jpg"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="float-left">
+                <p
+                  class="text-white mb-1"
+                  style="width: 110px; overflow-y: hidden; height: 20px"
+                >
+                  King Crab
+                </p>
+                <div style="display: flex">
+                  <div
+                    class="bg3 text-white text-center"
+                    style="width: 20px; height: 20px; font-size: 80%"
+                  >
+                    +
+                  </div>
+                  <div
+                    class="text-center text-white"
+                    style="width: 20px; height: 20px; font-size: 80%"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="bg3 text-white text-center"
+                    style="width: 20px; height: 20px; font-size: 80%"
+                  >
+                    -
+                  </div>
+                </div>
+              </div>
+              <div class="float-right" style="height: 50px; width: 120px">
+                <div
+                  class="float-right bg3 text-center"
+                  style="width: 20px; height: 100%"
+                >
+                  <p class="text-white" style="line-height: 50px">x</p>
+                </div>
+                <p
+                  class="float-right font-weight-bold text-white mr-2"
+                  style="font-size: 130%; line-height: 50px"
+                >
+                  33$
+                </p>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+
+            <div class="p-2 bg1 mb-2" style="height: 67px; width: 100%">
+              <div
+                class="mr-2 float-left"
+                style="width: 50px; height: 50px; background: green"
+              >
+                <img
+                  src="../public/images/product/1.jpg"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+              <div class="float-left">
+                <p class="text-white mb-1">King Crab</p>
+                <div style="display: flex">
+                  <div
+                    class="bg3 text-white text-center"
+                    style="width: 20px; height: 20px; font-size: 80%"
+                  >
+                    +
+                  </div>
+                  <div
+                    class="text-center text-white"
+                    style="width: 20px; height: 20px; font-size: 80%"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="bg3 text-white text-center"
+                    style="width: 20px; height: 20px; font-size: 80%"
+                  >
+                    -
+                  </div>
+                </div>
+              </div>
+              <div class="float-right" style="height: 50px; width: 120px">
+                <div
+                  class="float-right bg3 text-center"
+                  style="width: 20px; height: 100%"
+                >
+                  <p class="text-white" style="line-height: 50px">x</p>
+                </div>
+                <p
+                  class="float-right font-weight-bold text-white mr-2"
+                  style="font-size: 130%; line-height: 50px"
+                >
+                  33$
+                </p>
+              </div>
+              <div style="clear: both"></div>
+            </div>
+          </div>
+          <div style="width: 100%; height: 160px">
+            <p class="text-white float-left mb-1">Voucher</p>
+            <div
+              class="float-right bg3 text-center text-white"
+              style="width: 20px; height: 20px; font-size: 85%"
+            >
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+            <div style="clear: both"></div>
+            <p class="text-white float-left mb-1">Discount</p>
+            <p class="text-white float-right mb-1">10$</p>
+            <div style="clear: both"></div>
+            <p class="text-white float-left mb-1">Fee</p>
+            <p class="text-white float-right mb-1">10$</p>
+            <div style="clear: both"></div>
+            <p class="text-white float-left mb-1" style="font-size: 130%">
+              Total
+            </p>
+            <p class="text-white float-right mb-1" style="font-size: 130%">
+              10$
+            </p>
+            <div style="clear: both"></div>
+            <div class="btn bg-white" style="width: 100%; border-radius: 0">
+              Checkout
+            </div>
+          </div>
+          <div class="row m-0" style="display: none">
+            <div class="col-12 p-1">
+              <div class="bg1 p-2" style="width: 100%; height: 55px">
+                <div
+                  class="float-left mr-3 text-center bg3"
+                  style="width: 40px; height: 40px"
+                >
+                  <i
+                    class="fa fa-user-circle-o text-white"
+                    aria-hidden="true"
+                    style="font-size: 160%; line-height: 40px"
+                  ></i>
+                </div>
+                <div class="float-left">
+                  <p class="text-white mb-0">Max Burger</p>
+                  <p
+                    class="text-white mb-0"
+                    style="font-size: 80%; opacity: 0.7"
+                  >
+                    Administrator
+                  </p>
+                </div>
+                <div
+                  class="bg2 float-right text-center"
+                  style="width: 40px; height: 100%"
+                >
+                  <i
+                    class="fa fa-power-off text-white"
+                    aria-hidden="true"
+                    style="font-size: 130%; line-height: 39px"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 p-1" style="height: 80px">
+              <div class="bg1 p-2" style="width: 100%; height: 100%">
+                <p class="text-white mb-0" style="opacity: 0.7">Analytics</p>
+                <i
+                  class="fa fa-bar-chart text-white float-right"
+                  aria-hidden="true"
+                  style="font-size: 190%; opacity: 0.5"
+                ></i>
+              </div>
+            </div>
+            <div class="col-12 p-1" style="height: 80px">
+              <div class="bg1 p-2" style="width: 100%; height: 100%">
+                <p class="text-white mb-0" style="opacity: 0.7">Product</p>
+                <i
+                  class="fa fa fa-cutlery text-white float-right"
+                  aria-hidden="true"
+                  style="font-size: 190%; opacity: 0.5"
+                ></i>
+              </div>
+            </div>
+            <div class="col-12 p-1" style="height: 80px">
+              <div class="bg1 p-2" style="width: 100%; height: 100%">
+                <p class="text-white mb-0" style="opacity: 0.7">Customer</p>
+                <i
+                  class="fa fa fa-user-plus text-white float-right"
+                  aria-hidden="true"
+                  style="font-size: 190%; opacity: 0.5"
+                ></i>
+              </div>
+            </div>
+            <div class="col-12 p-1" style="height: 80px">
+              <div class="bg1 p-2" style="width: 100%; height: 100%">
+                <p class="text-white mb-0" style="opacity: 0.7">System</p>
+                <i
+                  class="fa fa-cogs text-white float-right"
+                  aria-hidden="true"
+                  style="font-size: 190%; opacity: 0.5"
+                ></i>
+              </div>
+            </div>
+            <div class="col-12 p-1" style="height: 80px">
+              <div class="bg1 p-2" style="width: 100%; height: 100%">
+                <p class="text-white mb-0" style="opacity: 0.7">Account</p>
+                <i
+                  class="fa fa fa fa-key text-white float-right"
+                  aria-hidden="true"
+                  style="font-size: 190%; opacity: 0.5"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-0 bg1" style="height: 100vh; width: calc(100% - 320px)">
+          <div class="p-3">
+            <p
+              class="text-white font-weight-bold float-right"
+              style="font-size: 130%"
+            >
+              POS
+            </p>
+
+            <div
+              class="bg2 float-left"
+              style="width: 350px; height: 50px; display: flex"
+            >
+              <input
+                class="p-2"
+                type=""
+                name=""
+                style="
+                  width: calc(100% - 50px);
+                  height: 100%;
+                  background: none;
+                  border: 0;
+                  outline: none;
+                  color: white;
+                "
+              />
+              <div class="text-center" style="width: 50px; height: 50px">
+                <i
+                  class="fa fa-search text-white"
+                  aria-hidden="true"
+                  style="font-size: 130%; line-height: 48px; opacity: 0.8"
+                ></i>
+              </div>
+            </div>
+            <div
+              class="bg2 ml-2 float-left text-center"
+              style="width: 100px; height: 50px"
+            >
+              <p class="text-white" style="line-height: 49px">Food</p>
+            </div>
+            <div
+              class="bg2 ml-2 float-left text-center"
+              style="width: 100px; height: 50px"
+            >
+              <p class="text-white" style="line-height: 49px">Drink</p>
+            </div>
+            <div style="clear: both"></div>
+          </div>
+
+          <div class="px-2">
+            <div class="p-1 float-left">
+              <div
+                class="bg2 text-center p-2"
+                style="width: 250px; height: 100px"
+              >
+                <div
+                  class="float-left"
+                  style="width: 90px; height: 100%; background: green"
+                >
+                  <img
+                    src="../public/images/product/1.jpg"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <p
+                  class="text-white mb-0 mt-2"
+                  style="height: 45px; overflow-y: hidden"
+                >
+                  King Crab
+                </p>
+                <p class="text-white">230$</p>
+              </div>
+            </div>
+            <div class="p-1 float-left">
+              <div
+                class="bg2 text-center p-2"
+                style="width: 250px; height: 100px"
+              >
+                <div
+                  class="float-left"
+                  style="width: 90px; height: 100%; background: green"
+                >
+                  <img
+                    src="../public/images/product/1.jpg"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <p
+                  class="text-white mb-0 mt-2"
+                  style="height: 45px; overflow-y: hidden"
+                >
+                  King Crab
+                </p>
+                <p class="text-white">230$</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-2" style="display: none">
+            <div class="p-1 float-left">
+              <div class="bg2 text-center" style="width: 100px; height: 100px">
+                <p class="text-white mb-0" style="font-size: 360%">1</p>
+                <i
+                  class="fa fa-circle mr-2 dot-danger float-right"
+                  aria-hidden="true"
+                  style="font-size: 75%; margin-top: -4px"
+                ></i>
+              </div>
+            </div>
+            <div class="p-1 float-left">
+              <div class="bg2 text-center" style="width: 100px; height: 100px">
+                <p class="text-white mb-0" style="font-size: 360%">2</p>
+                <i
+                  class="fa fa-circle mr-2 dot-pending float-right"
+                  aria-hidden="true"
+                  style="font-size: 75%; margin-top: -4px"
+                ></i>
+              </div>
+            </div>
+            <div class="p-1 float-left">
+              <div class="bg2 text-center" style="width: 100px; height: 100px">
+                <p class="text-white mb-0" style="font-size: 360%">3</p>
+                <i
+                  class="fa fa-circle mr-2 dot-success float-right"
+                  aria-hidden="true"
+                  style="font-size: 75%; margin-top: -4px"
+                ></i>
+              </div>
+            </div>
+            <div class="p-1 float-left">
+              <div class="bg2 text-center" style="width: 100px; height: 100px">
+                <p class="text-white mb-0" style="font-size: 360%">4</p>
+                <i
+                  class="fa fa-circle mr-2 dot-pending float-right"
+                  aria-hidden="true"
+                  style="font-size: 75%; margin-top: -4px"
+                ></i>
+              </div>
+            </div>
+            <div class="p-1 float-left">
+              <div class="bg2 text-center" style="width: 100px; height: 100px">
+                <p class="text-white mb-0" style="font-size: 360%">5</p>
+                <i
+                  class="fa fa-circle mr-2 dot-success float-right"
+                  aria-hidden="true"
+                  style="font-size: 75%; margin-top: -4px"
+                ></i>
+              </div>
+            </div>
+            <div class="p-1 float-left">
+              <div class="bg2 text-center" style="width: 100px; height: 100px">
+                <p class="text-white mb-0" style="font-size: 360%">6</p>
+                <i
+                  class="fa fa-circle mr-2 dot-success float-right"
+                  aria-hidden="true"
+                  style="font-size: 75%; margin-top: -4px"
+                ></i>
+              </div>
+            </div>
+            <div class="p-1 float-left">
+              <div class="bg2 text-center" style="width: 200px; height: 100px">
+                <p class="text-white mb-0" style="font-size: 360%">8</p>
+                <i
+                  class="fa fa-circle mr-2 dot-success float-right"
+                  aria-hidden="true"
+                  style="font-size: 75%; margin-top: -4px"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
